@@ -1,0 +1,20 @@
+const { faker }= require('@faker-js/faker');
+
+//faker.seed(123);
+// const nombre = faker.person.firstName();
+// const apellido = faker.person.lastName();
+
+// console.log(`Hola mi nombre es ${nombre} ${apellido}`); 
+
+// const url_image = faker.image.url();
+// console.log(url_image);
+
+const aprendiz={
+    "_id":faker.string.uuid(),
+    "fecha_nac":faker.date.birthdate(),
+    "email":faker.internet.email(),
+    "nombre": faker.person.firstName(),
+    "apellido": faker.person.lastName(),
+    "genero": faker.person.sexType()
+}
+console.log(aprendiz);
