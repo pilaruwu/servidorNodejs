@@ -7,8 +7,14 @@ db.createCollection('Usuarios',{
         $jsonSchema: {
             bsonType: "object",
             title: "User Object Validation",
-            required: ["nombre","apellido","cedula","password","email"],
+            required: ["id","nombre","apellido","cedula","password","email"],
             properties: {
+                id:{
+                    bsonType:"int",
+                    minimum:1,
+                    maximum:10000,
+                    description:"'id'identificacion"
+                },
                 name: {
                     bsonType: "string",
                     minimum: 3,
